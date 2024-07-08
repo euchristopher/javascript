@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Pergunta</title>
+    <!-- Include SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        #imagem {
+            display: none;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body> <!-- Oi -->
+    <img id="imagem" src="imagens/happy.jpg"Imagem>
+    
+    <!-- Include SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Função para mostrar a caixa de pergunta inicial
+        function mostrarPergunta() {
+            Swal.fire({
+                title: 'Você gosta de JS?',
+                showDenyButton: true,
+                confirmButtonText: `Sim`,
+                denyButtonText: `Não`
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Que bom!', '', 'success').then(() => {
+                        document.getElementById('imagem').style.display = 'block';
+                    });
+                } else if (result.isDenied) {
+                    Swal.fire({
+                        title: 'Por que não?',
+                        input: 'text',
+                        inputPlaceholder: 'Digite o motivo',
+                        showCancelButton: true,
+                        confirmButtonText: 'Enviar',
+                        cancelButtonText: 'Cancelar'
+                    }).then((reason) => {
+                        if (reason.isConfirmed) {
+                            Swal.fire(`Motivo: ${reason.value}`, '', 'info').then(() => {
+                                document.getElementById('imagem').style.display = 'block';
+                            });
+                        } else {
+                            document.getElementById('imagem').style.display = 'block';
+                        }
+                    });
+                } else {
+                    document.getElementById('imagem').style.display = 'block';
+                }
+            });
+        }
+
+        // Chame a função para mostrar a pergunta quando a página carregar
+        document.addEventListener('DOMContentLoaded', (event) => {
+            mostrarPergunta();
+        });
+    </script>
+</body>
+</html>
