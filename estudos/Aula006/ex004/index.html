@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ex004</title>
+  <style>
+    body{
+      font: normal 20px Arial
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const nome = prompt('Qual é o seu nome?')
+    document.write(`Olá ${nome}! o seu nome tem ${nome.length} letras<br>`)
+    document.write(`O seu nome em maiúsculo é ${nome.toUpperCase()}<br>`)
+    document.write(`O seu nome em minusculo é ${nome.toLowerCase()}`)
+    // document.write ( pode ser usado para depuração simples ou geração de conteúdo dinâmico durante o carregamento da página, mas é melhor evitar em aplicações modernas devido às suas limitações e problemas potenciais)
+    // length (É usado quando você precisa saber o comprimento de uma string ou o número de elementos em um array.)
+    /* toFixed: Formata um número para um número fixo de casas decimais.
+
+    so: n1.toFixed(2) arredonda n1 para duas casas decimais.
+    Exemplo: 123.456.toFixed(2) resulta em "123.46".
+    replace: Substitui partes de uma string por outra string.
+
+    Uso: n1.toFixed(2).replace('.', ',') primeiro arredonda n1 e depois substitui o ponto decimal por uma vírgula.
+    Exemplo: 123.456.toFixed(2).replace('.', ',') resulta em "123,46".
+    toLocaleString: Formata um número com base na localidade e opções especificadas, frequentemente usado para formatar moedas.
+
+    Uso: n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})    formata n1 como uma string de moeda em português do Brasil.
+    Exemplo: 1234.56.toLocaleString('pt-BR', {style: 'currency', currency:   'BRL'}) resulta em "R$ 1.234,56". 
+    */
+  </script>
+</body>
+</html>
