@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros passos com DOM</title>
+    <style>
+      body {
+        background-color: rgba(3, 133, 255, 0.767);
+        color: white;
+        font: Normal 20px Arial;
+      }
+      #msg {
+        margin-top: 20px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="titulo">Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p id="texto">Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+      const p1 = window.document.getElementsByTagName('p')[0] //Usa a tag
+      const d = document.getElementById('msg') //Usa o ID
+      const t = document.querySelector('h1.titulo') //Usa tanto id quanto class e tag
+      const p2 = document.querySelector('p#texto')
+      document.write('Está escrito assim: ' + p1.innerText)
+      d.style.background = 'black'
+      d.addEventListener
+      ('click', function () {
+        d.innerText = ('Você clicou em mim!')
+      })
+      t.style.color = 'red'
+      p2.style.fontSize = '24px'
+      /* p1.innerText = 'Novo texto' (Muda o texto) */
+      /* document.write(p1.textContent) (Muda a cor da fonte) */
+      /* corpo.style.background = 'black' (Muda a cor de fundo) 
+      corpo.style.color = 'white' (Muda a cor da fonte) 
+      document.write(p1.innerHTML) puxa todo o texto junto com os filhos, exemplo: um trecho com strong */
+    </script>
+  </body>
+</html>
