@@ -23,16 +23,19 @@
     <p>Aqui vai o resultado</p>
     <p id="texto">Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
     <div id="msg">Clique em mim</div>
+    <p id="mensagem"></p> <!-- Elemento onde a mensagem será exibida -->
     <script>
       const p1 = window.document.getElementsByTagName('p')[0] //Usa a tag
       const d = document.getElementById('msg') //Usa o ID
       const t = document.querySelector('h1.titulo') //Usa tanto id quanto class e tag
       const p2 = document.querySelector('p#texto')
+      const msg = document.querySelector('p#mensagem')
       document.write('Está escrito assim: ' + p1.innerText)
       d.style.background = 'black'
       d.addEventListener
       ('click', function () {
-        d.innerText = ('Você clicou em mim!')
+        /*d.innerText = ('Você clicou em mim!')*/ // Muda a mensagem original para a mensagem de evento
+        msg.textContent = 'Você clicou no botão'
       })
       t.style.color = 'red'
       p2.style.fontSize = '24px'
