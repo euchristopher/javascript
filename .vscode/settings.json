@@ -3,7 +3,10 @@
         "Confirmed",
         "dismiss",
         "Dismiss",
+        "Km",
         "Swal",
-        "txtn"
+        "txtn",
+        "txtv",
+        "txtvel"
     ]
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentação</title>
+    <style>
+      p{
+        font: normal 16px arial;
+      }
+      h1{
+        font: bolder 1.5em arial;
+      }
+      #erro{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Diga a sua nacionalidade.</h1>
+    <p>País: <input type="text" name="txt" id="txt" /></p>
+    <p><span id="erro"></span></p>
+    <p>Resultado: <span id="res"></span></p>
+    <p><input type="button" value="Verificar" onclick="verificar()" /></p>
+    <script>
+      function verificar() {
+        const txt = document.querySelector("input#txt")
+        const pais = "Brasil"
+        const erro = document.querySelector("span#erro")
+        const res = document.querySelector("span#res")
+        erro.innerHTML = ""
+        res.innerHTML = ""
+        if (txt.value.trim()=== ''){
+          erro.innerHTML = 'Por favor, preencha o campo corretamente.'
+        } else if (txt.value !== pais){
+          res.innerHTML = 'Você é estrangeiro.'
+        } else {
+          res.innerHTML = 'Você é brasileiro.'
+        }
+      }
+    </script>
+  </body>
+</html>
