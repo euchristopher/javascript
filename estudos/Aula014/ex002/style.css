@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body{
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+main{
+  background-color: white;
+  max-width: 600px;
+  padding: 40px;
+  margin: auto;
+  border-radius: 10px;
+}
