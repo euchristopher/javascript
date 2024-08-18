@@ -5,6 +5,6 @@ for (let pos = 0; pos < valores.length; pos++)
 
 const valores = [8, 1, 7, 4, 2, 9];
 valores.sort();
-for (let pos in valores) {
-  console.log(`A posição ${pos} tem posição ${valores[pos]}.`);
+for (let pos in valores) { /* ele vai mostrar a posição(pos) dos valores. */
+  console.log(`A posição ${pos} tem posição ${valores[pos]}.`); /* tem que colocar [let] quando usar a função "for" */
 }
